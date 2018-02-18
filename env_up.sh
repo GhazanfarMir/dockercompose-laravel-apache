@@ -1,9 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-#set folder where the repository is located (no trailing slash)
-APP_PATH=""
+# Setup Environment Variables
+export APP_PATH=${APP_PORT:-"${PWD}/app"}
+export APP_PORT=${APP_PORT:-9000}
+export DOCUMENT_ROOT=${DOCUMENT_ROOT:-"/var/www/html"}
+export DB_PORT=${DB_PORT:-13306}
+export DB_NAME=${DB_NAME:-dockerphp}
+export DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD:-dockerphp}
 
-echo 'Starting applications...'
-
-docker-compose down
+# Lets build the image
 docker-compose up -d --build

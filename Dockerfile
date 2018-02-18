@@ -2,9 +2,6 @@ FROM php:7.2.1-apache
 
 MAINTAINER "Ghazanfar Mir" <GhazanfarMir@gmail.com>
 
-## Environment Variables
-ENV DEVELOPER="Ghazanfar Mir" DEPARTMENT=Technology
-
 COPY composer-installer.sh /usr/local/bin/composer-installer
 RUN apt-get update && apt-get install -y mysql-client \
     unzip \
@@ -28,4 +25,4 @@ COPY config/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
 ADD app /var/www/html
 WORKDIR /var/www/html
 
-RUN chmod -R 777 storage bootstrap/cache
+# RUN chmod -R 777 storage bootstrap/cache
