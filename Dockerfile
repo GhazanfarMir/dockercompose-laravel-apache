@@ -1,4 +1,4 @@
-FROM php:7.2.1-apache
+FROM php:7.2.2-apache
 
 MAINTAINER "Ghazanfar Mir" <GhazanfarMir@gmail.com>
 
