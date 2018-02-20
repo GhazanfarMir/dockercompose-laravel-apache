@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo 'Terminating applications...'
+echo 'Terminating containers ...'
 
 docker-compose down
