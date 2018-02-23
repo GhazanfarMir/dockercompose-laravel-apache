@@ -1,6 +1,6 @@
 FROM php:7.2.2-apache
 
-MAINTAINER "Ghazanfar Mir" <GhazanfarMir@gmail.com>
+LABEL maintainer="GhazanfarMir@gmail.com"
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
