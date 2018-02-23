@@ -7,7 +7,7 @@ services:
       build:
         context: ./docker/php
         dockerfile: Dockerfile
-      image: "gmir/docker-apache:${VERSION}"
+      image: "gmir/docker-apache:latest"
       ports:
         - "${APP_PORT}:80"
       volumes:
