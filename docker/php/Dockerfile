@@ -32,5 +32,3 @@ RUN apt-get update && apt-get install -y apt-utils \
 
 COPY config/php/php.ini /usr/local/etc/php/
 COPY config/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
-
-# RUN chmod -R 777 storage bootstrap/cache
